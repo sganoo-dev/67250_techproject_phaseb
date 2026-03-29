@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Tickets - MonoMuse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a class="cta" href="tickets.html">Buy Tickets</a>
+        </nav>
+
+        <main class="main">
+            <h2>Select Your Tickets</h2>
+            
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Ticket Type</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>May 10th</td>
+                    <td>General Admission</td>
+                    <td>$18</td>
+                    <td><button onclick="revealForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>May 11th</td>
+                    <td>General Admission</td>
+                    <td>$18</td>
+                    <td><button onclick="revealForm()">Buy Now</button></td>
+                </tr>
+            </table>
+
+            <form id="ticketForm" onsubmit="processPayment(event)">
+                <h3>Complete Purchase</h3>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" required><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" required><br>
+                
+                <label for="quantity">Number of Tickets:</label><br>
+                <input type="number" id="quantity" min="1" required><br>
+                
+                <button type="submit" class="cta">Submit Payment</button>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+</body>
+</html>

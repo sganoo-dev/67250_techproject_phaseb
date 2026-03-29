@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MonoMuse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        
+        <header class="header">
+            <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="index.html">Home</a>
+            <a href="views/explore.html">Explore</a>
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a class="cta" href="views/tickets.html">Buy Tickets</a>
+        </nav>
+
+        <main class="main">
+            <h2 id="greeting">Welcome to MonoMuse</h2>
+            
+            <p id="shortIntro">MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity.</p>
+            <p id="longIntro">Through immersive exhibitions, interactive installations, and rotating collections, MonoMuse invites visitors to discover how digital innovation is transforming the way we create, experience, and understand art. Plan your visit to experience cutting-edge exhibitions, hands-on experiences, and events designed to inspire curiosity and creativity.</p>
+            
+            <button id="readMore">Read More</button>
+            <button id="readLess">Read Less</button>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+</body>
+</html>
