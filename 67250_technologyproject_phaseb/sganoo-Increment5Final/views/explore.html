@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | MonoMuse: Van Gogh</title>
+    <link rel="stylesheet" href="../static/style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MonoMuse: Van Gogh</a>
+        <button class="icon" onclick="toggleNav()" aria-label="Open navigation menu">&#9776;</button>
+        <div class="nav-links" id="myLinks">
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="membership.html">Membership</a>
+            <a href="tickets.html" class="cta">Buy Tickets</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="page-header">
+            <div class="page-header-inner">
+                <span class="section-label">About the Museum</span>
+                <h1>Explore MonoMuse</h1>
+            </div>
+        </div>
+
+        <section class="section">
+
+            
+            <img src="../static/museum-exterior.jpg"
+                 alt="Exterior view of the MonoMuse building — a grand neoclassical stone facade with tall columns and landscaped grounds under a clear blue sky."
+                 class="explore-hero">
+
+            <span class="section-label">Our Purpose</span>
+            <h2>Mission Statement</h2>
+            <div class="divider"></div>
+            <p class="lead-text">MonoMuse is dedicated to exploring the evolving relationship between art, technology, and society. Our mission is to inspire curiosity and creativity by showcasing innovative exhibitions that highlight how digital tools, emerging technologies, and human imagination shape the future of artistic expression.</p>
+
+            <h3 style="margin-bottom:10px; color:var(--navy);">Who We Serve</h3>
+            <p style="color:var(--muted); margin-bottom:48px;">We serve technologists, artists, students, and curious minds of all ages.</p>
+
+            <span class="section-label">Timeline</span>
+            <h2 style="margin-bottom:24px;">Our Story</h2>
+            <div class="divider"></div>
+
+            <ul class="milestones">
+                <li data-year="2023">Expansion of the museum space and launch of international artist collaborations.</li>
+                <li data-year="2018">Launch of the Interactive Media Lab, allowing visitors to experiment with creative coding.</li>
+                <li data-year="2016">MonoMuse opens its doors with its first exhibition on digital storytelling.</li>
+            </ul>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

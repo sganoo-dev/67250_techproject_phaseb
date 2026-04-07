@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets | MonoMuse: Van Gogh</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MonoMuse: Van Gogh</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+        <div class="nav-links" id="myLinks">
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+        </div>
+    </nav>
+
+    <main class="content-section">
+        <h1>Plan Your Visit</h1>
+        
+        <div class="visitor-info">
+            <table class="info-table">
+                <tr>
+                    <th>Location</th>
+                    <td>Museumplein 6, 1071 DJ Amsterdam</td>
+                </tr>
+                <tr>
+                    <th>Hours</th>
+                    <td>Daily: 9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <th>Pricing</th>
+                    <td>All Tickets: $18.00</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="form-container">
+            <h2>Purchase Tickets</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="visitDate">Visit Date *</label>
+                    <input type="date" id="visitDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ticketType">Ticket Type *</label>
+                    <select id="ticketType" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="general">General Admission</option>
+                        <option value="student">Student</option>
+                        <option value="member">Member</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ticketQuantity">Quantity (1-10) *</label>
+                    <input type="number" id="ticketQuantity" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="zipCode">Zip Code (Optional)</label>
+                    <input type="text" id="zipCode" pattern="\d{5}" title="Please enter a 5-digit zip code">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="mailingList">
+                    <label for="mailingList">Join our mailing list</label>
+                </div>
+
+                <div class="total-display">
+                    <h3>Total: $<span id="totalPrice">18</span>.00</h3>
+                </div>
+
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

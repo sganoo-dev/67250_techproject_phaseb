@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed | MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MonoMuse: Van Gogh</a>
+        <button class="icon" onclick="toggleNav()" aria-label="Open navigation menu">&#9776;</button>
+        <div class="nav-links" id="myLinks">
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="membership.html">Membership</a>
+            <a href="tickets.html" class="cta">Buy Tickets</a>
+        </div>
+    </nav>
+
+    <main class="confirmation-page">
+        <div class="confirmation-box" role="main" aria-label="Order confirmation">
+            <span class="section-label" style="display:block; margin-bottom:16px;">Order Confirmed</span>
+            <h1>Thank You.</h1>
+            <p>Your ticket purchase has been confirmed. We look forward to welcoming you.</p>
+
+            <table class="info-table" style="margin: 28px 0;" aria-label="Order summary">
+                <thead>
+                    <tr>
+                        <th scope="col">Detail</th>
+                        <th scope="col">Your Order</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Ticket Type</th>
+                        <td id="finalType">—</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Quantity</th>
+                        <td id="finalQty">—</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Visit Date</th>
+                        <td id="finalDate">—</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Total Charged</th>
+                        <td><strong>$<span id="finalTotal">0</span>.00</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>A receipt and digital tickets have been sent to your email address.</p>
+            <a href="../index.html" class="submit-btn" style="max-width:240px; margin: 24px auto 0; display:block;">Return to Home</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

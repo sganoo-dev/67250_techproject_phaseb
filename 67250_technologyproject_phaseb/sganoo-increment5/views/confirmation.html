@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation | MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MonoMuse: Van Gogh</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+        <div class="nav-links" id="myLinks">
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+        </div>
+    </nav>
+
+    <main class="content-section confirmation-page">
+        <div class="confirmation-box">
+            <h1>Thank You For Your Order!</h1>
+            <p>Your ticket purchase has been confirmed.</p>
+            <h2>Total Charged: $<span id="finalTotal">0</span>.00</h2>
+            <p>A receipt and digital tickets have been sent to your email.</p>
+            <a href="../index.html" class="submit-btn">Return to Home</a>
+        </div>
+    </main>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

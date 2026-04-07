@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse | The Van Gogh Experience</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">MonoMuse: Van Gogh</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+        <div class="nav-links" id="myLinks">
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a href="views/tickets.html">Tickets</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Step into the Starry Night</h1>
+            <p>Explore the life, passion, and vibrant colors of Vincent van Gogh.</p>
+        </section>
+
+        <section class="video-section">
+            <h2>The Immersive Experience</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wg_N_wK0tks" title="Van Gogh Museum Tour" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Visit Us</h2>
+            <p>Find us in the heart of the arts district.</p>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>

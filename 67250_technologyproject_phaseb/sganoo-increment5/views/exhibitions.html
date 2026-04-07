@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions | MonoMuse: Van Gogh</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MonoMuse: Van Gogh</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+        <div class="nav-links" id="myLinks">
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="content-section">
+            <h1>Current Exhibitions</h1>
+            
+            <div class="accordion-container">
+                <div class="accordion-header">The Masterpieces</div>
+                <div class="accordion-content">
+                    <p>Experience the definitive collection of Vincent van Gogh's most iconic works, brought together for the first time in a decade.</p>
+                </div>
+
+                <div class="accordion-header">Letters to Theo</div>
+                <div class="accordion-content">
+                    <p>Explore the intimate correspondence between Vincent and his brother, offering a glimpse into the artist's mind.</p>
+                </div>
+
+                <div class="accordion-header">The Arles Period</div>
+                <div class="accordion-content">
+                    <p>A deep dive into the vibrant, prolific months spent in the South of France, featuring the famous Sunflowers series.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2>Featured Gallery</h2>
+            <div class="gallery-container">
+                <img id="mainImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="The Starry Night">
+                <div class="thumbnails">
+                    <img class="thumb active" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="The Starry Night" onclick="changeImage(this)">
+                    <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vincent_Willem_van_Gogh_127.jpg/800px-Vincent_Willem_van_Gogh_127.jpg" alt="Sunflowers" onclick="changeImage(this)">
+                    <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg/800px-Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg" alt="Bedroom in Arles" onclick="changeImage(this)">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

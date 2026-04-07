@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | MonoMuse: Van Gogh</title>
+    <link rel="stylesheet" href="../static/style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MonoMuse: Van Gogh</a>
+        <button class="icon" onclick="toggleNav()" aria-label="Open navigation menu">&#9776;</button>
+        <div class="nav-links" id="myLinks">
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="membership.html">Membership</a>
+            <a href="tickets.html" class="cta">Buy Tickets</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="page-header">
+            <div class="page-header-inner">
+                <span class="section-label">Almost There</span>
+                <h1>Checkout</h1>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="form-container" style="max-width:520px; margin: 0 auto;">
+                <h2>Complete Your Order</h2>
+
+                <form id="ticketForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name"
+                               required aria-required="true" placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email"
+                               required aria-required="true" placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Number of Tickets *</label>
+                        <input type="number" id="quantity" name="quantity"
+                               min="1" required aria-required="true">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Complete Purchase</button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
