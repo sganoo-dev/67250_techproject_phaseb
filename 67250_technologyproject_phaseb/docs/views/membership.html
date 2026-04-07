@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership & Donations | MonoMuse: Van Gogh</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MonoMuse: Van Gogh</a>
+        <button class="icon" onclick="toggleNav()" aria-label="Open navigation menu">&#9776;</button>
+        <div class="nav-links" id="myLinks">
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="membership.html" class="nav-active">Membership</a>
+            <a href="tickets.html" class="cta">Buy Tickets</a>
+        </div>
+    </nav>
+
+    <main>
+
+       
+        <div class="page-header">
+            <div class="page-header-inner">
+                <span class="section-label">Support MonoMuse</span>
+                <h1>Membership &amp; Donations</h1>
+            </div>
+        </div>
+
+        <section class="section">
+
+            <span class="section-label">Why Become a Member</span>
+            <h2>Support the Arts</h2>
+            <div class="divider"></div>
+            <p class="lead-text">Your support keeps art alive. MonoMuse members enjoy exclusive benefits while directly funding the exhibitions, education programs, and community initiatives that make the museum possible.</p>
+
+            
+            <h3 class="subsection-heading">Membership Tiers</h3>
+            <table class="info-table" aria-label="Membership tiers and benefits">
+                <thead>
+                    <tr>
+                        <th scope="col">Tier</th>
+                        <th scope="col">Annual Cost</th>
+                        <th scope="col">Key Benefits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Friend</strong></td>
+                        <td>$60 / year</td>
+                        <td>Unlimited free admission, 10% gift shop discount</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Supporter</strong></td>
+                        <td>$120 / year</td>
+                        <td>All Friend benefits + guest passes, exhibition previews</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Patron</strong></td>
+                        <td>$250 / year</td>
+                        <td>All Supporter benefits + private curator tours, recognition in print</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Benefactor</strong></td>
+                        <td>$500 / year</td>
+                        <td>All Patron benefits + annual gala invitation, named recognition</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+            <h3 class="subsection-heading">Frequently Asked Questions</h3>
+            <div class="accordion-container" id="membershipFAQ">
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        How do I activate my membership?
+                    </button>
+                    <div class="accordion-content">
+                        <p>After completing your purchase, you will receive a confirmation email within 24 hours containing your digital membership card. Simply show this at the admissions desk on your first visit.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        Can I share my membership with a family member?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Supporter tier and above includes one complimentary guest pass per visit. A joint family membership upgrade is available for an additional $40/year — contact us at members@monomuse.org for details.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        Is my membership fee tax-deductible?
+                    </button>
+                    <div class="accordion-content">
+                        <p>MonoMuse is a registered 501(c)(3) nonprofit organization. The portion of your membership fee that exceeds the fair market value of benefits received may be tax-deductible. Please consult a tax advisor for your specific situation.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        How do donations differ from memberships?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Donations are one-time or recurring contributions with no attached benefits. They go directly to our general fund to support programming, acquisitions, and community outreach. Memberships include a package of visitor perks in return for your annual fee.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        
+            <h3 class="subsection-heading" style="margin-top: 56px;">Make a One-Time Donation</h3>
+            <div class="divider"></div>
+            <p class="lead-text" style="margin-bottom: 32px;">Every contribution, large or small, directly supports MonoMuse's mission to make art accessible to everyone.</p>
+
+            <div class="form-container">
+                <h2>Donation Form</h2>
+                <form id="donationForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="donorName">Full Name *</label>
+                        <input type="text" id="donorName" name="donorName" required aria-required="true" placeholder="Your full name">
+                        <span class="field-error" id="donorName-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donorEmail">Email Address *</label>
+                        <input type="email" id="donorEmail" name="donorEmail" required aria-required="true" placeholder="you@example.com">
+                        <span class="field-error" id="donorEmail-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donationAmount">Donation Amount ($) *</label>
+                        <select id="donationAmount" name="donationAmount" required aria-required="true">
+                            <option value="" disabled selected>Select an amount</option>
+                            <option value="25">$25</option>
+                            <option value="50">$50</option>
+                            <option value="100">$100</option>
+                            <option value="250">$250</option>
+                            <option value="other">Other amount</option>
+                        </select>
+                        <span class="field-error" id="donationAmount-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group" id="customAmountGroup" style="display:none;">
+                        <label for="customAmount">Enter Custom Amount ($) *</label>
+                        <input type="number" id="customAmount" name="customAmount" min="1" placeholder="e.g. 75">
+                        <span class="field-error" id="customAmount-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="anonymous" name="anonymous">
+                        <label for="anonymous">Make this donation anonymous</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Donation</button>
+
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

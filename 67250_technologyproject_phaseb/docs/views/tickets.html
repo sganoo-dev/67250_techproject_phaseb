@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets | MonoMuse: Van Gogh</title>
+    <link rel="stylesheet" href="../static/style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MonoMuse: Van Gogh</a>
+        <button class="icon" onclick="toggleNav()" aria-label="Open navigation menu">&#9776;</button>
+        <div class="nav-links" id="myLinks">
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="membership.html">Membership</a>
+            <a href="tickets.html" class="cta">Buy Tickets</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="page-header">
+            <div class="page-header-inner">
+                <span class="section-label">Plan Your Visit</span>
+                <h1>Tickets</h1>
+            </div>
+        </div>
+
+        <section class="section">
+
+            
+            <span class="section-label">Visitor Information</span>
+            <h2>Know Before You Go</h2>
+            <div class="divider"></div>
+
+            <table class="info-table" aria-label="Museum visitor information">
+                <thead>
+                    <tr>
+                        <th scope="col">Detail</th>
+                        <th scope="col">Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Location</th>
+                        <td>Museumplein 6, 1071 DJ Amsterdam</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Hours</th>
+                        <td>Daily: 9:00 AM &ndash; 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pricing</th>
+                        <td>All Tickets: $18.00 per person</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Contact</th>
+                        <td>info@monomuse.org &nbsp;|&nbsp; +31 20 570 5200</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+            <div class="form-container">
+                <h2>Purchase Tickets</h2>
+
+                <form id="checkoutForm" novalidate aria-label="Ticket purchase form">
+
+                    <div class="form-group">
+                        <label for="visitDate">Visit Date *</label>
+                        <input type="date" id="visitDate" name="visitDate"
+                               required aria-required="true" aria-describedby="visitDate-error">
+                        <span class="field-error" id="visitDate-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketType">Ticket Type *</label>
+                        <select id="ticketType" name="ticketType"
+                                required aria-required="true" aria-describedby="ticketType-error">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="general">General Admission — $18</option>
+                            <option value="student">Student — $18</option>
+                            <option value="member">Member — $18</option>
+                        </select>
+                        <span class="field-error" id="ticketType-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketQuantity">Quantity (1&ndash;10) *</label>
+                        <input type="number" id="ticketQuantity" name="ticketQuantity"
+                               min="1" max="10" value="1"
+                               required aria-required="true" aria-describedby="ticketQuantity-error">
+                        <span class="field-error" id="ticketQuantity-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email"
+                               required aria-required="true" aria-describedby="email-error"
+                               placeholder="you@example.com">
+                        <span class="field-error" id="email-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zipCode">Zip Code <span style="font-weight:300;">(Optional — 5 digits)</span></label>
+                        <input type="text" id="zipCode" name="zipCode"
+                               pattern="\d{5}" aria-describedby="zipCode-error"
+                               placeholder="e.g. 15213">
+                        <span class="field-error" id="zipCode-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="mailingList" name="mailingList">
+                        <label for="mailingList">Join our mailing list for upcoming exhibitions</label>
+                    </div>
+
+                    <div class="total-display" aria-live="polite">
+                        <h3>Order Total</h3>
+                        <span>$<span id="totalPrice">18</span>.00</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Place Order</button>
+
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

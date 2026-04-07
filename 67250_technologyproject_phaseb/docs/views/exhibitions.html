@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions | MonoMuse: Van Gogh</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MonoMuse: Van Gogh</a>
+        <button class="icon" onclick="toggleNav()" aria-label="Open navigation menu">&#9776;</button>
+        <div class="nav-links" id="myLinks">
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="membership.html">Membership</a>
+            <a href="tickets.html" class="cta">Buy Tickets</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="page-header">
+            <div class="page-header-inner">
+                <span class="section-label">On View Now</span>
+                <h1>Current Exhibitions</h1>
+            </div>
+        </div>
+
+        <section class="section">
+            
+            <div class="accordion-container" id="exhibitionsAccordion">
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="acc-1">
+                        The Masterpieces
+                    </button>
+                    <div class="accordion-content" id="acc-1" role="region">
+                        <p>Experience the definitive collection of Vincent van Gogh's most iconic works, brought together for the first time in a decade. From <em>The Starry Night</em> to <em>Irises</em>, this is the exhibition of a generation.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="acc-2">
+                        Letters to Theo
+                    </button>
+                    <div class="accordion-content" id="acc-2" role="region">
+                        <p>Explore the intimate correspondence between Vincent and his brother Theo, offering an unfiltered glimpse into the artist's turbulent mind, creative process, and unwavering passion for painting.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="acc-3">
+                        The Arles Period
+                    </button>
+                    <div class="accordion-content" id="acc-3" role="region">
+                        <p>A deep dive into the vibrant, prolific months spent in the South of France — featuring the famous Sunflowers series alongside lesser-known works that reveal van Gogh at his most expressive and free.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <div class="section--warm">
+            <section class="section">
+                <span class="section-label">Featured Works</span>
+                <h2>The Gallery</h2>
+                <div class="divider"></div>
+                <div class="gallery-container">
+
+                    <!-- src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" -->
+                    <img id="mainImage"
+                        src="../static/StarryNight.webp"
+                        alt="The Starry Night by Vincent van Gogh, 1889 — oil on canvas depicting a swirling night sky over a village. Source: Wikimedia Commons, public domain.">
+
+                    <div class="thumbnails" role="list" aria-label="Gallery thumbnails">
+
+                        <img class="thumb active" role="listitem"
+                            src="../static/StarryNight.webp"
+                            alt="The Starry Night thumbnail — select to view full image"
+                            onclick="changeImage(this)"
+                            tabindex="0"
+                            onkeypress="if(event.key==='Enter')changeImage(this)">
+
+                        <img class="thumb" role="listitem"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vincent_Willem_van_Gogh_127.jpg/800px-Vincent_Willem_van_Gogh_127.jpg"
+                            alt="Sunflowers thumbnail — select to view full image"
+                            onclick="changeImage(this)"
+                            tabindex="0"
+                            onkeypress="if(event.key==='Enter')changeImage(this)">
+                        <!--  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg/800px-Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg" -->
+                        <img class="thumb" role="listitem"
+                            src="../static/BedroomArles.jpg"
+                            alt="Bedroom in Arles thumbnail — select to view full image"
+                            onclick="changeImage(this)"
+                            tabindex="0"
+                            onkeypress="if(event.key==='Enter')changeImage(this)">
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script> 
+</body>
+</html>

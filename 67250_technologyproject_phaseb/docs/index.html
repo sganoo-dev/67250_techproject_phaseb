@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse | The Van Gogh Experience</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">MonoMuse: Van Gogh</a>
+        <button class="icon" onclick="toggleNav()" aria-label="Open navigation menu">&#9776;</button>
+        <div class="nav-links" id="myLinks">
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a href="views/membership.html">Membership</a>
+            <a href="views/tickets.html" class="cta">Buy Tickets</a>
+        </div>
+    </nav>
+
+    <main>
+
+        
+        <section class="hero" aria-label="Welcome">
+            <div class="hero-content">
+                <span class="hero-eyebrow">Amsterdam &mdash; Museumplein</span>
+                <h1>Step into the<br><em>Starry Night</em></h1>
+                <p>Explore the life, passion, and vibrant colors of Vincent van Gogh through an unparalleled immersive experience.</p>
+                <a href="views/tickets.html" class="hero-cta">Reserve Your Visit</a>
+            </div>
+        </section>
+
+        
+        <section class="section">
+            <span class="section-label">About MonoMuse</span>
+            <h2>What We Offer</h2>
+            <div class="divider"></div>
+            <p style="color:var(--muted); font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; line-height:1.9;">
+                MonoMuse is a single-artist museum dedicated to the complete world of Vincent van Gogh. Through immersive exhibitions, original correspondence, and an interactive gallery, we bring the artist's genius to life — for first-time visitors and lifelong admirers alike.
+            </p>
+        </section>
+
+        
+        <div class="section--dark">
+            <div class="inner section">
+                <span class="section-label">The Exhibition</span>
+                <h2>An Immersive Experience</h2>
+                <div class="divider"></div>
+                <p style="color:rgba(255,255,255,0.55); font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; margin-bottom:32px;">
+                    Walk inside the paintings. Feel the brushstrokes. Discover the man behind the masterpieces.
+                </p>
+                <!-- Embedded YouTube video - https://www.youtube.com/watch?v=wg_N_wK0tks -->
+                <div class="video-container">
+                    <iframe width="1417" height="797" src="https://www.youtube.com/embed/0D0z_CCKnNg" title="Van Gogh Museum 4K Virtual Tour || Exhibition ‘Van Gogh In Auvers&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+                </div>
+            </div>
+        </div>
+
+        
+        <section class="section">
+            <span class="section-label">Find Us</span>
+            <h2>Visit Us</h2>
+            <div class="divider"></div>
+            <p style="color:var(--muted); margin-bottom:0;">
+                Located at Museumplein 6 in the heart of Amsterdam's arts district — open daily, 9 AM to 6 PM. All tickets $18.
+            </p>
+            
+            <div id="map" aria-label="Interactive map showing MonoMuse location at Museumplein 6, Amsterdam"></div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+    </footer>
+
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>
